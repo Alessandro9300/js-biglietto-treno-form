@@ -6,7 +6,7 @@
 var buttGenera = document.getElementById("genera");
 
 buttGenera.addEventListener("click",
-function () {
+function (genButt) {
   var nomeCognome = document.getElementById("nomeCognome");
   var kmDaFare = document.getElementById("kmDaFare");
   var etaPass = document.getElementById("etaPass");
@@ -43,10 +43,33 @@ function () {
     outPrezzo.innerHTML = prezzoBiglietto.toFixed(2) + " Euro";
   }
 
+  // output cabina e codice CP
+
+  var numberRandom;
+  numberRandom = Math.random();
+
+  console.log("numero random " + numberRandom);
+
+  var nrCabina = numberRandom * 35;
+  // var nrCodice = numberRandom * 10000;
+
+  do {
+    var randomCodice = Math.random()
+    var nrCodice = randomCodice * 10000;
+  } while (nrCodice < 4000);
+
+  console.log(nrCabina);
+
+  document.getElementById("carrozza").innerHTML = nrCabina.toFixed(0);
+    document.getElementById("codiceCp").innerHTML = nrCodice.toFixed(0);
+
+
+  // var codiceCP =
+
 
 })
 
 
 
 
-console.log(etaPass.value);
+// console.log(etaPass.value);
