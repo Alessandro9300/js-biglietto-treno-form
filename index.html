@@ -11,23 +11,24 @@
       <div class="cont-inp">
         <div class="input">
           <h3>Nome e cognome</h3>
-          <input class="select" type="text" name="" value="" placeholder="Nome/cognome">
+          <input id="nomeCognome"class="select" type="text" name="" value="" placeholder="Nome/cognome">
 
         </div>
         <div class="input">
           <h3>Km da percorrere</h3>
-          <input class="select" type="text" name="" value="" placeholder="Inserisci Km">
+          <input id="kmDaFare" class="select" type="text" name="" value="" placeholder="Inserisci Km">
         </div>
         <div class="input">
           <h3>Fascia d'età</h3>
-          <select class="select">
-            <option value="">Minorenne</option>
-            <option value="">Over 65</option>
+          <select id="etaPass" class="select">
+            <option value="18">Meno di 18</option>
+            <option value="50">Fra 18 e 65</option>
+            <option value="65">Over 65</option>
           </select>
         </div>
       </div>
       <div class="cont-but">
-        <button type="button" name="button">Genera</button>
+        <button id="genera" type="button" name="button">Genera</button>
         <button type="button" name="button">Annulla</button>
       </div>
     </div>
@@ -39,7 +40,7 @@
         <div class="cont-output">
           <div class="passeggero">
             <h2>Nome Passeggero</h2>
-            <p id="nome-passeggero">fda</p>
+            <p id="nome-passeggero"></p>
           </div>
           <div class="outputs">
             <div class="outs">
@@ -68,7 +69,9 @@
 
 
 
+    <script type="text/javascript" src="scripts/script.js">
 
+    </script>
 
   </body>
 </html>
