@@ -4,9 +4,15 @@
 
 
 var buttGenera = document.getElementById("genera");
+var buttAnnulla = document.getElementById("annulla")
 
 buttGenera.addEventListener("click",
-function (genButt) {
+function () {
+
+  var contBiglietto = document.getElementById("biglietto");
+
+  contBiglietto.style.opacity = 1;
+
   var nomeCognome = document.getElementById("nomeCognome");
   var kmDaFare = document.getElementById("kmDaFare");
   var etaPass = document.getElementById("etaPass");
@@ -51,7 +57,6 @@ function (genButt) {
   console.log("numero random " + numberRandom);
 
   var nrCabina = numberRandom * 35;
-  // var nrCodice = numberRandom * 10000;
 
   do {
     var randomCodice = Math.random()
@@ -61,13 +66,30 @@ function (genButt) {
   console.log(nrCabina);
 
   document.getElementById("carrozza").innerHTML = nrCabina.toFixed(0);
-    document.getElementById("codiceCp").innerHTML = nrCodice.toFixed(0);
+  document.getElementById("codiceCp").innerHTML = nrCodice.toFixed(0);
 
 
-  // var codiceCP =
 
 
 })
+
+buttAnnulla.addEventListener("click",
+function(){
+  var contBiglietto = document.getElementById("biglietto");
+  contBiglietto.style.opacity = 0;
+
+
+  var nomeCognome = document.getElementById("nomeCognome");
+  var kmDaFare = document.getElementById("kmDaFare");
+
+  nomeCognome.value = "";
+  kmDaFare.value = "";
+
+
+
+})
+
+
 
 
 
